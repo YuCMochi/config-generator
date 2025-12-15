@@ -18,7 +18,7 @@ import {
 import TagInput from './components/TagInput';
 import { GlobalSettings, CartItemInternal, OutputJson } from './types';
 
-const PRESET_KEYWORDS = ["卡套", "桌墊", "損卡", "福袋", "影印", "亞英", "美英"];
+const PRESET_KEYWORDS = ["卡套", "桌墊", "福袋", "影印", "亞英", "美英", "只有書","損卡"];
 
 // Translation Dictionary
 const TRANSLATIONS = {
@@ -30,8 +30,8 @@ const TRANSLATIONS = {
     excludeKeywords: "排除關鍵字",
     addKeywordPlaceholder: "新增自訂關鍵字...",
     add: "新增",
-    excludeSellers: "排除賣家編號",
-    excludeSellersHelper: "按 Enter 新增賣家編號",
+    excludeSellers: "賣家黑名單",
+    excludeSellersHelper: "按 Enter 新增賣家代號",
     shoppingCart: "購物車",
     cardLabel: "卡片",
     cardName: "卡片名稱 (中文)",
@@ -61,7 +61,7 @@ const TRANSLATIONS = {
     excludeKeywords: "Exclude Keywords",
     addKeywordPlaceholder: "Add custom keyword...",
     add: "Add",
-    excludeSellers: "Exclude Sellers",
+    excludeSellers: "Seller Blacklist",
     excludeSellersHelper: "Press Enter to add seller IDs",
     shoppingCart: "Shopping Cart",
     cardLabel: "Card",
@@ -90,7 +90,7 @@ const TRANSLATIONS = {
 const initialSettings: GlobalSettings = {
   default_shipping_cost: 60,
   global_exclude_keywords: [...PRESET_KEYWORDS],
-  global_exclude_seller: ["19319587"]
+  global_exclude_seller: ["19319587", "12987125"]
 };
 
 type Language = 'zh' | 'en';
@@ -240,7 +240,7 @@ const App: React.FC = () => {
     setSettings({
       default_shipping_cost: 60,
       global_exclude_keywords: [...PRESET_KEYWORDS],
-      global_exclude_seller: ["19319587"]
+      global_exclude_seller: ["19319587", "12987125"]
     });
     setAvailableKeywords([...PRESET_KEYWORDS]);
     setCartItems([
