@@ -18,7 +18,7 @@ import {
 import TagInput from './components/TagInput';
 import { GlobalSettings, CartItemInternal, OutputJson } from './types';
 
-const PRESET_KEYWORDS = ["卡套", "桌墊", "福袋", "影印", "亞英", "美英", "只有書","損卡"];
+const PRESET_KEYWORDS = ["卡套", "桌墊", "福袋", "影印", "亞英", "美英", "簡中", "只有書", "損卡"];
 
 // Translation Dictionary
 const TRANSLATIONS = {
